@@ -1884,7 +1884,7 @@ __webpack_require__.r(__webpack_exports__);
         username: this.email,
         password: this.password,
         client_id: 2,
-        client_secret: '71RVqeLDiyt45wY4QEIIUnWR5mCGD7M6ZOuPwffv',
+        client_secret: 'mO0T6sAr30AWHQkPNzUlwTCS8jdagtGLeSm3Gsmq',
         grant_type: 'password',
         scope: ''
       }).then(function (response) {
@@ -51353,8 +51353,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/josh/dev/tutorials/thinkcodesign-document-upload/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/josh/dev/tutorials/thinkcodesign-document-upload/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/josh/dev/tutorials/thinkcodesign-csv-data-import/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/josh/dev/tutorials/thinkcodesign-csv-data-import/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ }),

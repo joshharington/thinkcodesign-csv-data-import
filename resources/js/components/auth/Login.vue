@@ -83,7 +83,7 @@
                     username: this.email,
                     password: this.password,
                     client_id: 2,
-                    client_secret: '71RVqeLDiyt45wY4QEIIUnWR5mCGD7M6ZOuPwffv',
+                    client_secret: 'mO0T6sAr30AWHQkPNzUlwTCS8jdagtGLeSm3Gsmq',
                     grant_type: 'password',
                     scope: ''
                 }).then(response => {
