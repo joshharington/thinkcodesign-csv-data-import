@@ -40,7 +40,7 @@ Vue.component('auth-login', require('./components/auth/Login.vue').default);
 /**
  *  Data Import
  */
-Vue.component('import-data', require('./components/dataimport/ImportData.vue').default);
+Vue.component('import-data', require('./components/data-import/ImportData.vue').default);
 
 
 /**
