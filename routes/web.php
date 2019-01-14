@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => ['auth']], function() {
+
+    Route::group(['namespace' => 'DataImport', 'prefix' => '/data-import'], function() {
+        Route::get('/', 'ImportDataController@index')->name('importdata');
+        Route::any('/upload', 'ImportDataController@upload')->name('importdata.upload');
+    });
+
+});

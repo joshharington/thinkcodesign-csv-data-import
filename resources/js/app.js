@@ -36,6 +36,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 Vue.component('auth-login', require('./components/auth/Login.vue').default);
 
+
+/**
+ *  Data Import
+ */
+Vue.component('import-data', require('./components/dataimport/ImportData.vue').default);
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
