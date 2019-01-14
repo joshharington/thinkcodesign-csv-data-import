@@ -1,0 +1,24 @@
+web:
+  build: .
+  dockerfile: ./etc/docker/dockerfile_php_7
+  volumes:
+    - ./:/var/www/html
+    - ./etc/php:/usr/local/etc/php
+    - ./etc/apache2/apache2.conf:/etc/apache2/conf-enabled/apache2.conf
+    - ./etc/apache2/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    - ./etc/apache2/hosts.conf:/etc/apache2/sites-enabled/hosts.conf
+  ports:
+    - "8889:80"
+  links:
+    - mysql:mysql
+
+
+mysql:
+  image: mariadb
+  ports:
+    - "3389:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=tutorial
+  volumes: 
+    - ./etc/mysql:/docker-entrypoint-initdb.d

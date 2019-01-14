@@ -1,0 +1,31 @@
+FROM php:5.6.37-apache-jessie
+
+RUN apt-get update && \
+    apt-get install -y \
+        zlib1g-dev \
+        nano \
+        tar \
+        sudo
+
+# Update software list and install php + nginx
+RUN apt-get update \
+  && apt-get install -y --force-yes \
+  php5 \
+  php5-fpm \
+  php5-cli \
+  php5-mysql \
+  php5-mcrypt \
+  php5-curl \
+  php5-gd \
+  php5-intl \
+  mysql-client
+
+# Clear cache
+RUN apt-get clean \
+  && rm -rf /var/lib/apt/lists/* \
+  /tmp/* \
+  /var/tmp/*
+
+RUN a2enmod rewrite
+RUN usermod -u 1000 www-data
+RUN usermod -G staff www-data
