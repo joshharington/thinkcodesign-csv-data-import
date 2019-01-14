@@ -8,7 +8,7 @@ web:
     - ./etc/apache2/000-default.conf:/etc/apache2/sites-available/000-default.conf
     - ./etc/apache2/hosts.conf:/etc/apache2/sites-enabled/hosts.conf
   ports:
-    - "8889:80"
+    - "8888:80"
   links:
     - mysql:mysql
 
@@ -16,7 +16,7 @@ web:
 mysql:
   image: mariadb
   ports:
-    - "3389:3306"
+    - "3388:3306"
   environment:
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_DATABASE=tutorial
